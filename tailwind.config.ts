@@ -1,6 +1,54 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
+const breakpoints = {
+  // Old break points
+  xxs: "360px",
+  xs: "370px",
+  sm: "575px",
+  md: "655px",
+  "md-lg": "720px",
+  lg: "1025px",
+  xl: "1026px",
+  "2xl": "1250px",
+  "3xl": "1350px",
+  "4xl": "1500px",
+
+  // NEW BREAKPOINTS BELOW
+
+  // Large break points
+  "lg-4": "1280px",
+  "lg-3": "1200px",
+  "lg-2": "1150px",
+  "lg-1": "1100px",
+
+  // Medium break points
+  "md-7": "1024px",
+  "md-6": "960px",
+  "md-5": "912px",
+  "md-4": "853px",
+  "md-3": "820px",
+  "md-2": "768px",
+  "md-1": "730px",
+
+  // Small break points
+  "sm-8": "600px",
+  "sm-7": "540px",
+  "sm-6": "500px",
+  "sm-5": "460px",
+  "sm-4": "430px",
+  "sm-3": "414px",
+  "sm-2": "390px",
+  "sm-1": "375px",
+
+  // Extra small break points
+  "xs-5": "360px",
+  "xs-4": "344px",
+  "xs-3": "300px",
+  "xs-2": "280px",
+  "xs-1": "260px",
+}
+
 const askBidColors = {
     "ask-10": "var(--ask-10)",
     "ask-20": "var(--ask-20)",
@@ -46,6 +94,7 @@ const systemColors = {
 
 module.exports = {
     content: [
+        "./src/**/*.{js,jsx,ts,tsx}",
         "./components/**/*.{js,jsx,ts,tsx}",
         "./pages/**/*.{js,jsx,ts,tsx}",
         "./pages/*.{js,jsx,ts,tsx}",
@@ -80,19 +129,11 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                xxs: "360px",
-                xs: "370px",
-                sm: "575px",
-                md: "655px",
-                "md-lg": "720px",
-                lg: "1025px",
-                xl: "1026px",
-                "2xl": "1250px",
-                "3xl": "1350px",
-                "4xl": "1500px",
+               ...breakpoints,
             },
             fontFamily: {
                 sans: ["Inter", ...defaultTheme.fontFamily.sans],
+                inter: ['"Inter"', "sans-serif"],
             },
             fontSize: {
                 m5xl: "2.625rem",
