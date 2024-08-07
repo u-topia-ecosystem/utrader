@@ -18,8 +18,8 @@ import { useRouter } from "next/router"
 import { posthog } from "posthog-js"
 import { FC, JSX, useCallback, useEffect, useMemo, useRef } from "react"
 import { useIntl } from "react-intl"
-import { ChartAndOrderBookWidget } from "../../components"
-import { getPublicConfig } from "../../configs/app"
+import { ChartAndOrderBookWidget } from "@/shared/components"
+import { getPublicConfig } from "@/shared/configs/app"
 
 const TradingChart = dynamic(() => import("@openware/neodax-web-sdk/trade/widgets/TradingChart").then((mod: any) => mod.TradingChart), {
   ssr: false,

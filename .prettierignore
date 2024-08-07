@@ -6,6 +6,4 @@ public
 .next
 yarn.lock
 package-lock.json
-tailwind.config.js
-tailwind.config.ts
 migrations

@@ -44,7 +44,7 @@ export const getSocialIcon = (social: string, fillColor: string) => {
     case "telegram":
       return (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_32184_54691)">
+          <g clipPath="url(#clip0_32184_54691)">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"

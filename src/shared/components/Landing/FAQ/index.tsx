@@ -23,7 +23,7 @@ export const LandingFAQ = () => {
           setSelectedFaq={setSelectedFaq}
         />
       )),
-    [selectedFaqs, FaqData, setSelectedFaq],
+    [selectedFaqs, setSelectedFaq],
   )
 
   return (

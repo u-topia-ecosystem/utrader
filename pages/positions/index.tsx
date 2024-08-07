@@ -1,4 +1,4 @@
-import { getPublicConfig } from "../../configs/app"
+import { getPublicConfig } from "@/shared/configs/app"
 import { appTitle, PositionsWidget, useSetMobileDevice, withClearportAuth } from "@openware/neodax-web-sdk"
 import classnames from "classnames"
 import Head from "next/head"

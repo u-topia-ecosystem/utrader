@@ -107,7 +107,7 @@ export function Layout(props: PropsWithChildren<{ className?: string; withoutLay
         }),
       },
     ]
-  }, [markets, intl, currentMarket, isLoggedin, landingPageMode,  walletPageMode])
+  }, [markets, intl, currentMarket, isLoggedin, landingPageMode, walletPageMode])
 
   const mobileNavigation = useMemo((): navigationApp[] => {
     if (!customMobileNavigation) return []

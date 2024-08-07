@@ -128,9 +128,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        ...breakpoints,
-      },
+      screens: { ...breakpoints },
+      containers: { ...breakpoints },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         inter: ['"Inter"', "sans-serif"],
@@ -370,5 +369,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/container-queries"), require("@tailwindcss/forms")],
 };

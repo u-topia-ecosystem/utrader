@@ -5,7 +5,7 @@ import dynamic from "next/dynamic"
 import React, { useCallback, useEffect } from "react"
 import Head from "next/head"
 import { posthog } from "posthog-js"
-import { getPublicConfig } from "../../configs/app"
+import { getPublicConfig } from "@/shared/configs/app"
 
 const TradeHistory = dynamic(() => import("@openware/neodax-web-sdk").then((mod: any) => mod.TradeHistory), {
   ssr: false,

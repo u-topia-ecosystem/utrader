@@ -8,7 +8,7 @@ interface LatestNewsProps {
 const LatestNews: FC<LatestNewsProps> = ({ news }) => {
   const renderNews = (item: TStrapiNewsType) => {
     return (
-      <div key={item.id} className="w-full rounded border border-divider-color-10 bg-body-background-color p-[18px] lg:max-w-[400px]">
+      <div key={item.id} className="w-full rounded-xl border border-divider-color-10 bg-body-background-color p-[18px] lg:max-w-[400px]">
         <h4 className="text-base font-semibold text-text-color-100">{item.title}</h4>
         <p className="mb-2 mt-1 line-clamp-2 text-ellipsis break-all text-sm font-normal text-text-color-80">{item.description}</p>
         <a
