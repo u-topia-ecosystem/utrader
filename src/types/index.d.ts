@@ -1,1 +1,1 @@
-declare module '@sentry/nextjs';
+declare module "@sentry/nextjs"
