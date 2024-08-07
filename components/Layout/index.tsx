@@ -107,7 +107,7 @@ export function Layout(props: PropsWithChildren<{ className?: string; withoutLay
         }),
       },
     ]
-  }, [markets, intl, currentMarket, isLoggedin, landingPageMode, customSidebarNavigations, walletPageMode])
+  }, [markets, intl, currentMarket, isLoggedin, landingPageMode,  walletPageMode])
 
   const mobileNavigation = useMemo((): navigationApp[] => {
     if (!customMobileNavigation) return []
@@ -181,6 +181,8 @@ export function Layout(props: PropsWithChildren<{ className?: string; withoutLay
         }),
       },
     ],
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   )
 

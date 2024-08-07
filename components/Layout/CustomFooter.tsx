@@ -23,6 +23,7 @@ export const CustomFooter: React.FC<CustomFooterProps> = ({ footerLogoIcon }) =>
 
   const renderLinks = useCallback(
     (links: TFooterLinkItem[]) => <div className="flex flex-col items-start gap-3">{links.map(renderLinkItem)}</div>,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   )
 
@@ -44,6 +45,7 @@ export const CustomFooter: React.FC<CustomFooterProps> = ({ footerLogoIcon }) =>
         <div className="flex items-center gap-6">{socials?.slice(4).map(renderSocial)}</div>
       </div>
     )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

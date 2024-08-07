@@ -39,6 +39,8 @@ const MarketsTable: FC = () => {
       setLoading(true)
       dispatch(fetchAssets(currentChain))
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assetsFetching, currentChain])
 
   const tableHeader = useMemo(() => {
