@@ -21,7 +21,11 @@ const TradeHistoryList: React.FC = () => {
     "overflow-y-auto": isMobile,
   })
 
-  const translate = useCallback((id: string, value?: any) => intl.formatMessage({ id }, { ...value }), [])
+  const translate = useCallback(
+    (id: string, value?: any) => intl.formatMessage({ id }, { ...value }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  )
 
   useEffect(() => {
     const pageViewData = {

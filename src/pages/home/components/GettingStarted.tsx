@@ -1,4 +1,4 @@
-import { GettingStartedAssets } from "@src/shared/assets/landing/GettingStartedAssets"
+import { GettingStartedAssets } from "@/shared/assets/landing/GettingStartedAssets"
 import React, { FC } from "react"
 
 const CARDS = [

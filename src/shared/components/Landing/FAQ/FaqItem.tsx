@@ -22,6 +22,7 @@ export const FaqItem: React.FC<IFaqItemProps> = ({ selectedFaqs, faqItem, setSel
           return newSelected
         }
       }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   )
 
