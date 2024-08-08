@@ -13,7 +13,7 @@ import { LandingFAQ } from "./components/FAQ"
 import { KnowledgeCenter } from "./components/KnowledgeCenter"
 
 interface HomeProps {
-  news: TStrapiNewsType[]
+  news?: TStrapiNewsType[]
 }
 
 const Home = ({ news }: HomeProps): JSX.Element => {
