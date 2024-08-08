@@ -102,7 +102,7 @@ const MarketsTable: FC = () => {
   const { getLoadingSkeletonData, getTableData } = getMarketsTableData({ isMobile, marketsLength, mergedData })
 
   return (
-    <section className="flex w-full max-w-[904px] flex-col items-start gap-6">
+    <div className="flex w-full max-w-[904px] flex-col items-start gap-6">
       <h3 className="text-2xl font-medium text-text-color-100 max-md:px-[18px]">Markets</h3>
       <Table
         data={loading ? getLoadingSkeletonData() : getTableData()}
@@ -118,7 +118,7 @@ const MarketsTable: FC = () => {
         tableDividerColor="border-divider-color-20"
         paddingHeaderClass=""
       />
-    </section>
+    </div>
   )
 }
 

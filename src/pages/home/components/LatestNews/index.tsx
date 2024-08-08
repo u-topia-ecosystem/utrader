@@ -2,18 +2,22 @@ import React, { FC } from "react"
 import { TStrapiNewsType } from "./GetLatestNews"
 
 interface LatestNewsProps {
-  news: TStrapiNewsType[]
+  news?: TStrapiNewsType[]
 }
 
-const LatestNews: FC<LatestNewsProps> = ({ news }) => {
+const LatestNews = ({}: LatestNewsProps) => {
+  const news = getNews()
+
   const renderNews = (item: TStrapiNewsType) => {
     return (
-      <div key={item.id} className="w-full rounded-xl border border-divider-color-10 bg-body-background-color p-[18px] lg:max-w-[400px]">
-        <h4 className="text-base font-semibold text-text-color-100">{item.title}</h4>
-        <p className="mb-2 mt-1 line-clamp-2 text-ellipsis break-all text-sm font-normal text-text-color-80">{item.description}</p>
+      <div key={item.id} className="grid gap-2 rounded-lg border border-divider-color-10 bg-body-background-color p-[18px]">
+        <h4 className="font-open-sans text-base font-semibold text-text-color-100">{item.title}</h4>
+
+        <p className="mb-4 text-sm font-normal text-text-color-80">{item.description}</p>
+
         <a
-          href={`https://yellow.com/news/${item.slug}`}
-          className="tex-sm group flex items-center font-semibold text-secondary-control-color-80 duration-200 hover:text-secondary-control-color-90"
+          href={"#"}
+          className="tex-sm group flex items-center font-open-sans font-semibold text-secondary-control-color-80 duration-200 hover:text-secondary-control-color-90"
         >
           Read more
           <svg className="ml-2" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -31,11 +35,42 @@ const LatestNews: FC<LatestNewsProps> = ({ news }) => {
   }
 
   return (
-    <section className="w-full max-md:px-[18px] lg:max-w-[400px]">
+    <section>
       <h3 className="mb-6 text-2xl font-medium text-text-color-100">Latest News</h3>
-      <div className="flex flex-wrap gap-6 max-lg:items-center lg:flex-col lg:items-start">{news.map(renderNews)}</div>
+      <div className="grid gap-6">{news.map(renderNews)}</div>
     </section>
   )
+}
+
+const getNews = () => {
+  const news: TStrapiNewsType[] = [
+    {
+      id: 1,
+      slug: "slug",
+      title: "Uniswap (UNI)",
+      createdAt: "2022-02-22T09:00:00.000Z",
+      description: "The Automated Liquidity Protocol Utilized for Token Swaps On-Chain.",
+      target: "_blank",
+    },
+    {
+      id: 1,
+      slug: "slug",
+      title: "THORChain (RUNE)",
+      createdAt: "2022-02-22T09:00:00.000Z",
+      description: "The Cross-Chain DEX That Can Automatically Adjust Trading Fees for Cost-Efficiency.",
+      target: "_blank",
+    },
+    {
+      id: 1,
+      slug: "slug",
+      title: "Bitcoin (BTC)",
+      createdAt: "2022-02-22T09:00:00.000Z",
+      description: "The Cryptocurrency That Shaped The Entire Crypto Industry.",
+      target: "_blank",
+    },
+  ]
+
+  return news
 }
 
 export default LatestNews

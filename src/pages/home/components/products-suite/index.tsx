@@ -3,7 +3,7 @@ const ProductSuite = () => {
 
   return (
     <div className="space-y-8">
-      <h2 className="font-inter text-4xl font-bold text-text-color-100">Discover our products</h2>
+      <h2 className="font-inter text-2xl font-bold text-text-color-100 md-3:text-4xl">Discover our products</h2>
 
       <div className="grid grid-cols-2 gap-16 max-md-7:grid-cols-1">
         <div className="grid gap-4">

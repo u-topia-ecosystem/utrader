@@ -1,44 +1,35 @@
-import React, { useCallback, useMemo, useState } from "react"
+import React, { useState } from "react"
 import FaqData from "./faq.json"
-import { FaqItem } from "./FaqItem"
-
-export type TFaqData = {
-  id: number
-  title: string
-  answer: string
-}
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/shared/components/ui/accordion"
+import { cn } from "@/shared/utils/cn"
 
 export const LandingFAQ = () => {
-  const [selectedFaqs, setSelectedFaq] = useState<TFaqData[]>([])
-
-  const handleCollapseAll = useCallback(() => setSelectedFaq([]), [])
-
-  const renderFaqItems = useMemo(
-    () =>
-      FaqData?.map((faqDataItem) => (
-        <FaqItem
-          key={faqDataItem.id + faqDataItem.title}
-          faqItem={faqDataItem}
-          selectedFaqs={selectedFaqs}
-          setSelectedFaq={setSelectedFaq}
-        />
-      )),
-    [selectedFaqs, setSelectedFaq],
-  )
+  const [activeValue, setActiveValue] = useState<string>(getValue(0))
 
   return (
-    <div className="z-10 flex w-full max-w-full flex-col gap-4 lg:max-w-[calc(100%-424px)]">
-      <h1 className="text-[22px] font-semibold text-text-color-100 max-lg:leading-[30px] lg:text-2xl">Frequently Asked Questions</h1>
+    <div className="space-y-6">
+      <h1 className="font-inter text-2xl font-bold text-text-color-100">Frequently Asked Questions</h1>
 
-      <div className="flex w-full flex-col items-start gap-3">
-        <button
-          onClick={handleCollapseAll}
-          className="text-sm font-semibold leading-[22px] text-secondary-control-color-60 hover:text-secondary-control-color-90"
-        >
-          Collapse All
-        </button>
-        <div className="flex w-full flex-col gap-1">{renderFaqItems}</div>
-      </div>
+      <Accordion type="single" defaultValue={getValue(0)} onChange={(e) => console.log(e.target)} className="space-y-3">
+        {FaqData?.map((data, idx) => {
+          const value = getValue(idx)
+
+          return (
+            <AccordionItem
+              value={value}
+              key={idx}
+              data-active={activeValue === value}
+              className={cn("border-none bg-neutral-control-color-10 px-4 shadow-md data-[active='true']:bg-body-background-color")}
+              onClick={() => setActiveValue(value)}
+            >
+              <AccordionTrigger className="text-left font-open-sans text-base font-bold text-text-color-100">{data.title}</AccordionTrigger>
+              <AccordionContent className="font-open-sans text-sm font-normal text-text-color-100">{data.answer}</AccordionContent>
+            </AccordionItem>
+          )
+        })}
+      </Accordion>
     </div>
   )
 }
+
+const getValue = (idx: number) => `item-${idx}`

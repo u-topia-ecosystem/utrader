@@ -93,6 +93,7 @@ const systemColors = {
 };
 
 module.exports = {
+  darkMode: ["class"],
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
@@ -127,6 +128,13 @@ module.exports = {
     "text-color-30",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       screens: { ...breakpoints },
       containers: { ...breakpoints },
@@ -357,17 +365,27 @@ module.exports = {
             transform: "translateX(calc(-2px / 5.5)) rotate(calc(-4deg / 5))",
           },
         },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
       animation: {
         wobble: "wobble 1s ease-in-out infinite",
         "wobble-once": "wobble 1s ease-in-out",
         wiggle: "wiggle 1s ease-in-out infinite",
         "wiggle-once": "wiggle 1s ease-in-out",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
       transitionProperty: {
         all: "all, width, height",
       },
     },
   },
-  plugins: [require("@tailwindcss/container-queries"), require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/container-queries"), require("@tailwindcss/forms"), require("tailwindcss-animate")],
 };

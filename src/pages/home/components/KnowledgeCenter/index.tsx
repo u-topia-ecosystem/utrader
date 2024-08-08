@@ -15,7 +15,7 @@ export const KnowledgeCenter: FC = () => {
   }
 
   return (
-    <section className="space-y-6 max-lg:hidden">
+    <section className="space-y-6">
       <h3 className="text-2xl font-medium text-text-color-100">Knowledge Center</h3>
 
       <div className="flex flex-col rounded border border-divider-color-20 bg-body-background-color px-4">{docs.map(renderItem)}</div>
