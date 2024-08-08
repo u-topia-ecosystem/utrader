@@ -1,0 +1,167 @@
+$lightColors: (
+  // Main colors
+  main-background-color: "#FFFFFF",
+  navbar-color: "#FFFFFF",
+  text-color: "#272727",
+  primary-cta-color: "#1C1160",
+  secondary-control-color: "#4B96D1",
+
+  // Advanced colors
+  // BACKGROUND COLORS
+  subheader-background-color: "#FFFFFF",
+  body-background-color: "#FFFFFF",
+  input-background-color: "#FFFFFF",
+  dropdown-background-color: "#FFFFFF",
+  shadow-color: "#0000001A",
+  navbar-background-color: "#FFFFFF",
+  footer-background-color: "#FFFFFF",
+
+  // SIDEBAR COLORS
+  navbar-control-layer-color-10: "#FFFFFF",
+  navbar-control-layer-color-20: "#B3B0CA",
+  navbar-control-layer-color-40: "#8D88AF",
+  navbar-control-layer-color-60: "#1C1160",
+  navbar-control-layer-color-80: "#170E50",
+  navbar-control-layer-color-90: "#130B40",
+
+  navbar-control-bg-color-10: "#E3E0F0",
+  navbar-control-bg-color-20: "#D2CFDF",
+  navbar-control-bg-color-40: "#686095",
+  navbar-control-bg-color-60: "#1C1160",
+  navbar-control-bg-color-80: "#170E50",
+  navbar-control-bg-color-90: "#130B40",
+
+  // TEXT COLORS
+  text-color-0: "#FFFFFF",
+  text-color-10: "#EBEBEB",
+  text-color-20: "#D3D3D3",
+  text-color-30: "#BDBDBD",
+  text-color-40: "#A6A6A6",
+  text-color-50: "#8E8E8E",
+  text-color-60: "#737373",
+  text-color-70: "#585858",
+  text-color-80: "#3F3F3F",
+  text-color-90: "#272727",
+  text-color-100: "#090909",
+
+  neutral-control-color-0: "#FFFFFF",
+  neutral-control-color-10: "#F8F8F8",
+  neutral-control-color-20: "#F4F4F4",
+  neutral-control-color-30: "#F1F1F1",
+  neutral-control-color-40: "#EDEDED",
+  neutral-control-color-50: "#E3E3E3",
+  neutral-control-color-60: "#DCDCDC",
+  neutral-control-color-70: "#CECFD2",
+  neutral-control-color-80: "#C0C2CB",
+  neutral-control-color-90: "#B0B3C2",
+  neutral-control-color-100: "#7F828F",
+
+  neutral-control-layer-color-0: "#FFFFFF",
+  neutral-control-layer-color-10: "#DCDCDC",
+  neutral-control-layer-color-20: "#BDBDBD",
+  neutral-control-layer-color-30: "#AAAAAA",
+  neutral-control-layer-color-40: "#8E8E8E",
+  neutral-control-layer-color-50: "#747272",
+  neutral-control-layer-color-60: "#3F3F3F",
+  neutral-control-layer-color-70: "#2C2C2C",
+  neutral-control-layer-color-80: "#000000",
+  neutral-control-layer-color-90: "#000000",
+  neutral-control-layer-color-100: "#1C1160",
+
+  divider-color-10: "#EDEDED",
+  divider-color-20: "#DCDCDC",
+  divider-color-40: "#C2C4CB",
+  divider-color-60: "#A2A6B6",
+  divider-color-80: "#8288A1",
+  divider-color-90: "#5B6488",
+
+  // CTA COLORS
+  primary-cta-color-10: "#E2E0EB",
+  primary-cta-color-20: "#B3B0CA",
+  primary-cta-color-40: "#8D88AF",
+  primary-cta-color-60: "#1C1160",
+  primary-cta-color-80: "#170E50",
+  primary-cta-color-90: "#130B40",
+
+  primary-cta-layer-color-10: "#E2E0EB",
+  primary-cta-layer-color-20: "#B3B0CA",
+  primary-cta-layer-color-40: "#686095",
+  primary-cta-layer-color-60: "#FFFFFF",
+  primary-cta-layer-color-80: "#FFFFFF",
+  primary-cta-layer-color-90: "#000000",
+
+  secondary-control-color-10: "#DBEAF6",
+  secondary-control-color-20: "#C3DCF0",
+  secondary-control-color-40: "#87B9E0",
+  secondary-control-color-60: "#4B96D1",
+  secondary-control-color-80: "#3F7DAE",
+  secondary-control-color-90: "#32648B",
+
+  secondary-control-layer-color-10: "#FFFFFF",
+  secondary-control-layer-color-20: "#FFFFFF",
+  secondary-control-layer-color-40: "#FFFFFF",
+  secondary-control-layer-color-60: "#FFFFFF",
+  secondary-control-layer-color-80: "#FFFFFF",
+  secondary-control-layer-color-90: "#FFFFFF",
+
+  // SYSTEM
+  system-green-10: "#E8FCF1",
+  system-green-20: "#A5E1BF",
+  system-green-40: "#419E6A",
+  system-green-60: "#007031",
+  system-green-80: "#00401C",
+  system-green-90: "#002611",
+
+  system-blue-10: "#D3E1FE",
+  system-blue-20: "#7EA5F8",
+  system-blue-40: "#4D82F3",
+  system-blue-60: "#2563EB",
+  system-blue-80: "#0037B3",
+  system-blue-90: "#002987",
+
+  system-yellow-10: "#FFF5D5",
+  system-yellow-20: "#FFDE81",
+  system-yellow-40: "#EFB008",
+  system-yellow-60: "#976400",
+  system-yellow-80: "#724B00",
+  system-yellow-90: "#4D2900",
+
+  system-red-10: "#FEEEEE",
+  system-red-20: "#FBC0C0",
+  system-red-40: "#F56666",
+  system-red-60: "#DE3232",
+  system-red-80: "#B60000",
+  system-red-90: "#8C0000",
+
+  system-orange: "#FF943D",
+
+  ask-10: "#FEEEEE",
+  ask-20: "#FBC0C0",
+  ask-40: "#F56666",
+  ask-60: "#DE3232",
+  ask-80: "#B90404",
+  // ask-80: "#B60000", // this is the old one
+  ask-90: "#8C0000",
+
+  bid-10: "#E8FCF1",
+  bid-20: "#A5E1BF",
+  bid-40: "#419E6A",
+  bid-60: "#007031",
+  bid-80: "#00401C",
+  bid-90: "#002611",
+
+  // OLD
+  primary-cta-color-main: #b3b0ca,
+  color-contrast: #1c1160,
+  cta-contrast: #090909,
+  secondary-color: #737373,
+  secondary-color-dark: #5a6689,
+  secondary-color-light: #8b94ac,
+  divider-color: #dcdcdc
+);
+
+:root {
+  @each $name, $color in $lightColors {
+    --#{$name}: #{$color};
+  }
+}
