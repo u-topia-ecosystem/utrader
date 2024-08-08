@@ -4,17 +4,17 @@ import React, { FC } from "react"
 const CARDS = [
   {
     title: "Set up your wallet",
-    description: "Sign up with email and get your non-custodial Smart Wallet created within seconds",
+    description: "Sign up with email and get your non-custodial Smart Wallet created within seconds.",
     imageIndex: 0,
   },
   {
     title: "Fund your Channel",
-    description: "Fund your Smart Wallet and use it to deposit collateral and open channel",
+    description: "Fund your Smart Wallet and use it to deposit collateral and open channel.",
     imageIndex: 1,
   },
   {
     title: "Start Trading",
-    description: "Long or short your favorite pairs without prepayment. Batch settle with Atomic Swap",
+    description: "Long or short your favorite pairs without prepayment. Batch settle with Atomic Swap.",
     imageIndex: 2,
   },
 ]

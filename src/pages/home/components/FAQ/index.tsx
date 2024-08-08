@@ -29,6 +29,7 @@ export const LandingFAQ = () => {
   return (
     <div className="z-10 flex w-full max-w-full flex-col gap-4 lg:max-w-[calc(100%-424px)]">
       <h1 className="text-[22px] font-semibold text-text-color-100 max-lg:leading-[30px] lg:text-2xl">Frequently Asked Questions</h1>
+
       <div className="flex w-full flex-col items-start gap-3">
         <button
           onClick={handleCollapseAll}

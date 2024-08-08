@@ -48,7 +48,7 @@ function App({ Component, pageProps }: CustomAppProps): JSX.Element {
       <Head>
         <link rel="icon" type="image/svg+xml" href={favicon} />
         <meta name="viewport" content="width=device-width, initial-scale=1" charSet="UTF-8" />
-        <title>{appTitle(defaultAppTitle)}</title>
+        <title>{appTitle(defaultAppTitle, "")}</title>
         <meta name="description" content={metaDescription} />
       </Head>
       <ErrorBoundary>
