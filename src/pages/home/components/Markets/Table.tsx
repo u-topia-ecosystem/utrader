@@ -22,13 +22,13 @@ const MarketsTable = () => {
 
   const styles = {
     tableHeader: "bg-neutral-control-color-10",
-    tableRow: "",
+    tableRow: "border-divider-color-10",
     tableHead: "ring-0 text-right text-xs font-semibold text-text-color-60 font-open-sans",
     tableCell: "ring-0 py-3 text-right text-sm font-semibold text-text-color-100 font-open-sans",
   }
 
   return (
-    <div className="h-fit overflow-x-auto rounded-md border">
+    <div className="h-fit overflow-x-auto rounded-md border border-divider-color-10">
       <Table className="h-full max-h-full min-h-full">
         <TableHeader className={styles.tableHeader}>
           {table.getHeaderGroups().map((headerGroup) => (
