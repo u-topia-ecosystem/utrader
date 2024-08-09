@@ -5,10 +5,10 @@ import Head from "next/head"
 import Home, { TStrapiNewsType, getLatestNews } from "@/pages/home"
 
 interface HomeProps {
-  news: TStrapiNewsType[]
+  news?: TStrapiNewsType[]
 }
 
-const Page: FC<HomeProps> = ({ news }): JSX.Element => {
+const Page: FC<HomeProps> = ({ news = [] }): JSX.Element => {
   const { defaultAppTitle } = getPublicConfig()
 
   return (
@@ -21,12 +21,12 @@ const Page: FC<HomeProps> = ({ news }): JSX.Element => {
   )
 }
 
-export const getServerSideProps = async () => {
-  const { strapiBaseUrl } = getPublicConfig()
+// export const getServerSideProps = async () => {
+//   const { strapiBaseUrl } = getPublicConfig()
 
-  const news = await getLatestNews(strapiBaseUrl)
+//   const news = await getLatestNews(strapiBaseUrl)
 
-  return { props: { news } }
-}
+//   return { props: { news } }
+// }
 
 export default Page

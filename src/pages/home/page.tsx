@@ -5,7 +5,7 @@ import { TickersWidget } from "@openware/neodax-web-sdk"
 import LandingLayer from "@/shared/components/LandingLayer"
 import HeroSection from "./components/HeroSection"
 import LatestNews from "./components/LatestNews"
-import MarketsTable from "./components/Markets"
+import MarketsTable, { LegacyMarkets } from "./components/Markets"
 import { TStrapiNewsType } from "./components/LatestNews/GetLatestNews"
 import { GettingStarted } from "./components/GettingStarted"
 import ProductSuite from "./components/products-suite"
@@ -13,7 +13,7 @@ import { LandingFAQ } from "./components/FAQ"
 import { KnowledgeCenter } from "./components/KnowledgeCenter"
 
 interface HomeProps {
-  news: TStrapiNewsType[]
+  news?: TStrapiNewsType[]
 }
 
 const Home = ({ news }: HomeProps): JSX.Element => {
@@ -32,7 +32,7 @@ const Home = ({ news }: HomeProps): JSX.Element => {
     <main className="mb-20">
       <HeroSection />
 
-      <div className="flex w-full items-center">
+      <div className="flex w-full items-center overflow-x-auto">
         <TickersWidget />
       </div>
 
@@ -41,6 +41,10 @@ const Home = ({ news }: HomeProps): JSX.Element => {
           <MarketsTable />
           <LatestNews />
         </div>
+
+        {/* <div className="">
+          <LegacyMarkets />
+        </div> */}
 
         <GettingStarted />
 
