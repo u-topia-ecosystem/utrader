@@ -35,9 +35,9 @@ const LatestNews = ({}: LatestNewsProps) => {
   }
 
   return (
-    <section>
+    <section className="@container">
       <h3 className="mb-6 text-2xl font-medium text-text-color-100">Latest News</h3>
-      <div className="grid gap-6">{news.map(renderNews)}</div>
+      <div className="grid gap-6 @sm-8:grid-cols-2">{news.map(renderNews)}</div>
     </section>
   )
 }

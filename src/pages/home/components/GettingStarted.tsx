@@ -28,9 +28,9 @@ export const GettingStarted: FC = () => {
       >
         <GettingStartedAssets index={card.imageIndex} />
         <div className="flex w-full flex-col items-start gap-3">
-          <h4 className="flex items-end gap-1 font-open-sans text-xl font-bold text-text-color-100">
-            {card.title}
-            <span>.</span>
+          <h4 className="font-open-sans text-xl font-bold text-text-color-100">
+            <span>{card.title}</span>
+            <span> .</span>
           </h4>
           <p className="font-open-sans text-sm font-semibold text-text-color-60">{card.description}</p>
         </div>
@@ -39,7 +39,7 @@ export const GettingStarted: FC = () => {
   }
 
   return (
-    <div className="flex w-full max-w-full flex-col gap-6 3xl:w-[1328px]">
+    <div className="flex flex-col gap-6">
       <h3 className="font-inter text-2xl font-bold text-text-color-100">Getting started</h3>
       <div className="grid gap-6 md-2:grid-cols-2 lg-1:grid-cols-3">{CARDS.map(renderCard)}</div>
     </div>
