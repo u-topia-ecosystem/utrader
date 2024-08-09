@@ -3,7 +3,7 @@ import { flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-tabl
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/shared/components/ui/table"
 import { cn } from "@/shared/utils/cn"
 import { fetchCoin } from "./data"
-import { getColumns } from "./columnss"
+import { getColumns } from "./columns"
 import { Skeleton } from "@/shared/components/ui/skeleton"
 import { useSetMobileDevice } from "@openware/neodax-web-sdk"
 
@@ -21,15 +21,16 @@ const MarketsTable = () => {
   })
 
   const styles = {
+    tableHeader: "bg-neutral-control-color-10",
     tableRow: "",
     tableHead: "ring-0 text-right text-xs font-semibold text-text-color-60 font-open-sans",
-    tableCell: "ring-0 text-right h-[40px] text-sm font-semibold text-text-color-100 font-open-sans",
+    tableCell: "ring-0 py-3 text-right text-sm font-semibold text-text-color-100 font-open-sans",
   }
 
   return (
     <div className="h-fit overflow-x-auto rounded-md border">
       <Table className="h-full max-h-full min-h-full">
-        <TableHeader>
+        <TableHeader className={styles.tableHeader}>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id} className={styles.tableRow}>
               {headerGroup.headers.map((header) => {
