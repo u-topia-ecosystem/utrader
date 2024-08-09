@@ -8,7 +8,7 @@ import { Skeleton } from "@/shared/components/ui/skeleton"
 import { useSetMobileDevice } from "@openware/neodax-web-sdk"
 
 const MarketsTable = () => {
-  const { data = [] } = useQuery({ queryKey: ["markets-data"], queryFn: fetchCoin, refetchInterval: 10_000 })
+  const { data = [] } = useQuery({ queryKey: ["markets-data"], queryFn: fetchCoin, refetchInterval: 30_000 })
   const isMobile = useSetMobileDevice(false, 600)
 
   const emptyList: number[] = new Array(7).fill(0)
