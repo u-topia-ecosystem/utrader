@@ -3,6 +3,7 @@ import { JSX, useMemo } from "react"
 import type { AppContext, AppProps } from "next/app"
 import NextApp from "next/app"
 import Head from "next/head"
+import Provider from "@/provider"
 import { Layout } from "@/shared/components"
 import { PostHogProvider } from "posthog-js/react"
 import { useRouter } from "next/router"
@@ -51,17 +52,19 @@ function App({ Component, pageProps }: CustomAppProps): JSX.Element {
         <title>{appTitle(defaultAppTitle, "")}</title>
         <meta name="description" content={metaDescription} />
       </Head>
-      <ErrorBoundary>
-        <CoreProvider darkThemeConfig={pageProps.darkColorsConfig} lightThemeConfig={pageProps.lightColorsConfig}>
-          <PostHogProvider>
-            <div className="bg-main-background-color">
-              <Layout {...layoutProps}>
-                <Component {...pageProps} />
-              </Layout>
-            </div>
-          </PostHogProvider>
-        </CoreProvider>
-      </ErrorBoundary>
+      <Provider>
+        <ErrorBoundary>
+          <CoreProvider darkThemeConfig={pageProps.darkColorsConfig} lightThemeConfig={pageProps.lightColorsConfig}>
+            <PostHogProvider>
+              <div className="bg-main-background-color">
+                <Layout {...layoutProps}>
+                  <Component {...pageProps} />
+                </Layout>
+              </div>
+            </PostHogProvider>
+          </CoreProvider>
+        </ErrorBoundary>
+      </Provider>
     </>
   )
 }
