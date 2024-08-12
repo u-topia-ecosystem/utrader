@@ -1,14 +1,13 @@
-import { useQuery } from "@tanstack/react-query"
 import { flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-table"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/shared/components/ui/table"
 import { cn } from "@/shared/utils/cn"
-import { fetchCoin } from "./data"
+import { useMarketsData } from "../data"
 import { getColumns } from "./columns"
 import { Skeleton } from "@/shared/components/ui/skeleton"
 import { useSetMobileDevice } from "@openware/neodax-web-sdk"
 
-const MarketsTable = () => {
-  const { data = [] } = useQuery({ queryKey: ["markets-data"], queryFn: fetchCoin, refetchInterval: 30_000 })
+export const MarketsTable = () => {
+  const { data = [] } = useMarketsData()
   const isMobile = useSetMobileDevice(false, 600)
 
   const emptyList: number[] = new Array(7).fill(0)
@@ -68,5 +67,3 @@ const MarketsTable = () => {
     </div>
   )
 }
-
-export default MarketsTable

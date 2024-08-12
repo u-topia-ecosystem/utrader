@@ -1,6 +1,6 @@
 import LegacyMarkets from "./LegacyTable"
-import Markets from "./Table"
 
-export default Markets
+export * from "./components/Table"
+export * from "./components/TickerGroup"
 
 export { LegacyMarkets }
