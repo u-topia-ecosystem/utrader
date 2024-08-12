@@ -5,7 +5,7 @@ import { TickersWidget } from "@openware/neodax-web-sdk"
 import LandingLayer from "@/shared/components/LandingLayer"
 import HeroSection from "./components/HeroSection"
 import LatestNews from "./components/LatestNews"
-import MarketsTable, { LegacyMarkets } from "./components/Markets"
+import { MarketsTable, TickerGroup, LegacyMarkets } from "./components/Markets"
 import { TStrapiNewsType } from "./components/LatestNews/GetLatestNews"
 import { GettingStarted } from "./components/GettingStarted"
 import ProductSuite from "./components/products-suite"
@@ -32,9 +32,11 @@ const Home = ({ news }: HomeProps): JSX.Element => {
     <main className="mb-20">
       <HeroSection />
 
-      <div className="flex w-full items-center overflow-x-auto">
+      {/* <div className="flex w-full items-center overflow-x-auto">
         <TickersWidget />
-      </div>
+      </div> */}
+
+      <TickerGroup />
 
       <LandingLayer className="mt-16 grid gap-20" tag="section">
         <div className="grid gap-6 lg-1:grid-cols-[1fr_400px]">

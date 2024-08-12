@@ -4,6 +4,7 @@ import { formatSignificantWithSeparators } from "@openware/neodax-web-sdk"
 import { createColumnHelper } from "@tanstack/react-table"
 import { CoinMarket } from "coingecko-api-v3"
 import Image from "next/image"
+import Link from "next/link"
 
 const columnHelper = createColumnHelper<CoinMarket>()
 
@@ -22,7 +23,7 @@ export const getColumns = (isMobile?: boolean) => {
       header: () => "24h",
       cell: (info) => <PriceChange24h data={info.row.original} />,
     }),
-    columnHelper.accessor("market_cap_change_24h", {
+    columnHelper.accessor("total_volume", {
       header: () => <div className="">24h Volume</div>,
       cell: (info) => <div className="font-normal">${formatSignificantWithSeparators(String(info.getValue() || ""))}</div>,
       enableHiding: true,
@@ -35,8 +36,10 @@ export const getColumns = (isMobile?: boolean) => {
 }
 
 const Pair = ({ data, className }: { data: CoinMarket; className?: string }) => {
+  const href = `/trading/${data.symbol}usd`
+
   return (
-    <div className={cn("flex items-center gap-3 font-semibold", className)}>
+    <Link href={href} className={cn("flex items-center gap-3 font-semibold", className)}>
       <div className="min-h-[36px] min-w-[36px] rounded-full">
         {data.image && <Image src={data.image} width={36} height={36} alt={data.name || ""} className="rounded-full" />}
       </div>
@@ -45,7 +48,7 @@ const Pair = ({ data, className }: { data: CoinMarket; className?: string }) => 
         <span className="">{data.symbol}</span>
         <span className="text-xs text-text-color-60">/USD</span>
       </div>
-    </div>
+    </Link>
   )
 }
 
