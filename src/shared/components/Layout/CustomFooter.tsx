@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React, { useCallback, useMemo } from "react"
 import { FOOTER_ITEMS, getSocialIcon } from "./footerItems"
+import { cn } from "@/shared/utils/cn"
 
 type TFooterLinkItem = {
   title: string
@@ -9,9 +10,10 @@ type TFooterLinkItem = {
 
 export interface CustomFooterProps {
   footerLogoIcon?: JSX.Element
+  className?: string
 }
 
-export const CustomFooter: React.FC<CustomFooterProps> = ({ footerLogoIcon }) => {
+export const CustomFooter: React.FC<CustomFooterProps> = ({ className, footerLogoIcon }) => {
   const renderLinkItem = useCallback(
     (item: TFooterLinkItem) => (
       <Link className="whitespace-nowrap text-sm font-normal text-text-color-100" href={item.url} key={item.title}>
@@ -49,7 +51,12 @@ export const CustomFooter: React.FC<CustomFooterProps> = ({ footerLogoIcon }) =>
   }, [])
 
   return (
-    <footer className="flex w-full items-center justify-center border-t border-divider-color-20 bg-footer-background-color px-[18px] max-md:mb-16 md:px-8 md-lg:px-12 lg:px-[84px]">
+    <footer
+      className={cn(
+        "flex w-full items-center justify-center border-t border-divider-color-20 bg-footer-background-color px-[18px] max-md:mb-16 md:px-8 md-lg:px-12 lg:px-[84px]",
+        className,
+      )}
+    >
       <div className="flex w-full max-w-full flex-col items-start 3xl:w-[1328px]">
         <div className="flex w-full items-start gap-12 border-b border-divider-color-20 py-[72px] max-md-lg:flex-col md-lg:items-center md-lg:gap-16 lg:gap-[120px] 3xl:gap-[164px]">
           <div className="flex flex-col items-start gap-4">

@@ -2,7 +2,7 @@ import { FC, JSX } from "react"
 import { getPublicConfig } from "@/shared/configs/app"
 import { appTitle } from "@openware/neodax-web-sdk"
 import Head from "next/head"
-import Home from "@/pages/home"
+import KnowledgeCenter from "@/pages/knowledge"
 
 interface HomeProps {}
 
@@ -12,19 +12,11 @@ const Page: FC<HomeProps> = (): JSX.Element => {
   return (
     <>
       <Head>
-        <title>{appTitle(defaultAppTitle, "")}</title>
+        <title>{appTitle(defaultAppTitle, "Knowledge Center")}</title>
       </Head>
-      <Home />
+      <KnowledgeCenter />
     </>
   )
 }
-
-// export const getServerSideProps = async () => {
-//   const { strapiBaseUrl } = getPublicConfig()
-
-//   const news = await getLatestNews(strapiBaseUrl)
-
-//   return { props: { news } }
-// }
 
 export default Page
