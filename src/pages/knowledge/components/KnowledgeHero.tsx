@@ -22,8 +22,8 @@ const ContentSection = () => {
       <h1 className="w-full max-w-[547px] font-inter text-3xl font-bold text-text-color-100 @sm-6:text-5xl">U-trader executive summary</h1>
 
       <p className="max-w-[564px] font-open-sans text-sm font-normal text-text-color-80 @sm-6:text-lg">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. it has been the industry's standard dummy text ever since
-        the stoneage.
+        {`Lorem Ipsum is simply dummy text of the printing and typesetting industry. it has been the industry's standard dummy text ever since
+        the stoneage.`}
       </p>
 
       <Link
