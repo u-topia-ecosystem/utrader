@@ -1,6 +1,6 @@
-import { CorePotentialChart } from "../../assets/landing/CorePotentialChart"
-import { GiantGlobe } from "../../assets/landing/GiantGlobeAsset"
-import { getPublicConfig } from "../../configs/app"
+import { CorePotentialChart } from "@/shared/assets/landing/CorePotentialChart"
+import { GiantGlobe } from "@/shared/assets/landing/GiantGlobeAsset"
+import { getPublicConfig } from "@/shared/configs/app"
 import React, { FC } from "react"
 
 const CARDS_FIRST_ROW = [

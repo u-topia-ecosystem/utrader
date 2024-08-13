@@ -62,7 +62,7 @@ export const CustomFooter: React.FC<CustomFooterProps> = ({ className, footerLog
           <div className="flex flex-col items-start gap-4">
             <div className="flex flex-col items-start gap-1">
               <div className="h-10 w-[110px]">{footerLogoIcon}</div>
-              <p className="whitespace-nowrap text-sm font-normal leading-6 text-text-color-60">A better way of decentralised trading</p>
+              <p className="text-sm font-normal leading-6 text-text-color-60">A better way of decentralised trading</p>
             </div>
             {renderSocials}
           </div>

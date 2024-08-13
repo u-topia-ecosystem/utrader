@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const KnowledgeHero = () => {
   return (
-    <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-10 py-10 pb-24 md-2:grid-cols-[1fr_300px] lg-2:grid-cols-[1fr_462px]">
+    <div className="grid w-full grid-cols-1 gap-10 py-10 pb-24 md-2:grid-cols-[1fr_300px] lg-2:grid-cols-[1fr_462px]">
       <ContentSection />
 
       <div className="max-md-2:hidden">
