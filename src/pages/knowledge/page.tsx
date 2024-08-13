@@ -3,7 +3,6 @@ import KnowledgeHero from "./components/KnowledgeHero"
 import { CoreTech } from "./components/CoreTech"
 import { CorePotential } from "./components/CorePotential"
 import { KnowledgeCenterFaq } from "./components/faq"
-import { GiantGlobe } from "@/shared/assets/landing/GiantGlobeAsset"
 
 const Page = () => {
   return (
@@ -19,10 +18,6 @@ const Page = () => {
       </section>
 
       <KnowledgeCenterFaq />
-
-      <div className="pointer-events-none relative z-10">
-        <GiantGlobe className="pointer-events-none absolute -left-[400px] -top-[70px] -z-10 max-h-[1110px] max-w-[1000px]" />
-      </div>
     </LandingLayout>
   )
 }

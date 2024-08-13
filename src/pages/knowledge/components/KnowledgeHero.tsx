@@ -2,10 +2,13 @@ import LandingLayer from "@/shared/components/LandingLayer"
 import { cn } from "@/shared/utils/cn"
 import Image from "next/image"
 import Link from "next/link"
+import { GiantGlobe } from "@/shared/assets/landing/GiantGlobeAsset"
 
 const KnowledgeHero = () => {
   return (
-    <LandingLayer className="grid grid-cols-1 gap-10 md-2:grid-cols-[1fr_300px] lg-2:grid-cols-[1fr_462px]">
+    <LandingLayer className="relative z-10 grid grid-cols-1 gap-10 overflow-hidden pb-40 pt-10 md-2:grid-cols-[1fr_300px] lg-2:grid-cols-[1fr_462px]">
+      <GiantGlobe className="pointer-events-none absolute -top-10 -z-10" />
+
       <ContentSection />
 
       <div className="max-md-2:hidden">
