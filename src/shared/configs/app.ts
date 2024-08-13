@@ -7,7 +7,7 @@ import {
 // export const setPublicConfig = setNeodaxPublicConfig
 // export const getPublicConfig = getNeodaxRuntimeConfig
 
-const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "U-Trader"
+const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "U-trader"
 
 export const getPublicConfig = (): IPublicConfig => {
   return { ...getNeodaxRuntimeConfig(), appName: APP_NAME, defaultAppTitle: APP_NAME }

@@ -1,17 +1,18 @@
+import LandingLayer from "@/shared/components/LandingLayer"
 import { cn } from "@/shared/utils/cn"
 import Image from "next/image"
 import Link from "next/link"
 
 const KnowledgeHero = () => {
   return (
-    <div className="grid w-full grid-cols-1 gap-10 py-10 pb-24 md-2:grid-cols-[1fr_300px] lg-2:grid-cols-[1fr_462px]">
+    <LandingLayer className="grid grid-cols-1 gap-10 py-10 pb-24 md-2:grid-cols-[1fr_300px] lg-2:grid-cols-[1fr_462px]">
       <ContentSection />
 
       <div className="max-md-2:hidden">
         <div className="h-[12px] w-full bg-primary-cta-color-60"></div>
         <Image src="/images/knowledge-hero.webp" width={462} height={462} alt="" className="h-auto w-full" />
       </div>
-    </div>
+    </LandingLayer>
   )
 }
 

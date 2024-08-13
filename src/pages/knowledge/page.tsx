@@ -1,19 +1,19 @@
 import LandingLayout from "@/shared/components/LandingLayout"
 import KnowledgeHero from "./components/KnowledgeHero"
-import LandingLayer from "@/shared/components/LandingLayer"
 import { CoreTech } from "./components/CoreTech"
+import { CorePotential } from "./components/CorePotential"
 
 const Page = () => {
   return (
     <LandingLayout>
-      <LandingLayer>
-        <KnowledgeHero />
-      </LandingLayer>
+      <KnowledgeHero />
 
       <section className="bg-neutral-control-color-10">
-        <LandingLayer>
-          <CoreTech />
-        </LandingLayer>
+        <CoreTech />
+      </section>
+
+      <section className="overflow-hidden">
+        <CorePotential />
       </section>
     </LandingLayout>
   )

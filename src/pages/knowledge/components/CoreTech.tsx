@@ -1,6 +1,7 @@
 import { CoreTechClearing } from "@/shared/assets/CoreTechClearing"
 import { CoreTechAssets, CoreTechClearingSecond } from "@/shared/assets/landing/CoreTechAssets"
 import { CoreTechPoweredBy } from "@/shared/assets/landing/CoreTechPoweredBy"
+import LandingLayer from "@/shared/components/LandingLayer"
 import Link from "next/link"
 import React, { FC } from "react"
 
@@ -56,7 +57,7 @@ export const CoreTech: FC = () => {
     )
   }
   return (
-    <section className="w-full py-[72px]">
+    <LandingLayer className="py-[72px]">
       <h3 className="mb-9 text-2xl font-medium text-text-color-100 max-[855px]:text-center">Core Technology</h3>
 
       <div className="flex flex-col">
@@ -89,6 +90,6 @@ export const CoreTech: FC = () => {
           Learn More
         </Link>
       </div>
-    </section>
+    </LandingLayer>
   )
 }
