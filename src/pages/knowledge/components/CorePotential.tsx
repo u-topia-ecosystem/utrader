@@ -1,5 +1,5 @@
 import { CorePotentialChart } from "@/shared/assets/landing/CorePotentialChart"
-import { GiantGlobe } from "@/shared/assets/landing/GiantGlobeAsset"
+
 import LandingLayer from "@/shared/components/LandingLayer"
 import { getPublicConfig } from "@/shared/configs/app"
 import React, { FC } from "react"
@@ -36,7 +36,7 @@ export const CorePotential: FC = () => {
     </div>
   )
   return (
-    <LandingLayer className="flex flex-col-reverse items-center justify-between gap-9 py-10 2xl:flex-row 2xl:gap-6">
+    <LandingLayer className="flex flex-col-reverse items-center justify-between gap-9 2xl:flex-row 2xl:gap-6">
       <div className="z-10 flex flex-col gap-9">
         <h3 className="text-[22px] font-medium text-text-color-100 max-lg:leading-[30px] lg:text-2xl">
           Unlock the full potential of trading with {appName}
@@ -46,11 +46,7 @@ export const CorePotential: FC = () => {
           <div className="flex items-center gap-6 max-md-lg:flex-col">{CARDS_FIRST_ROW.map(renderCard)}</div>
           <div className="relative flex items-center gap-6 max-md-lg:flex-col">
             {CARDS_SECONDS_ROW.map(renderCard)}
-            <div className="pointer-events-none absolute -left-[700px] bottom-[70px] md:-left-[540px]">
-              <div className="pointer-events-none relative">
-                <GiantGlobe className="pointer-events-none absolute -left-0 top-0 z-0 max-h-[1110px] max-w-[1090px] md:max-h-[1240px] md:max-w-[1220px]" />
-              </div>
-            </div>
+            <div className="pointer-events-none absolute -left-[700px] bottom-[70px] md:-left-[540px]"></div>
           </div>
         </div>
       </div>

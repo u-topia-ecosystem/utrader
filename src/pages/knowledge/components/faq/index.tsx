@@ -2,14 +2,15 @@ import React, { useState } from "react"
 import { getFaqData } from "./data"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/shared/components/ui/accordion"
 import { cn } from "@/shared/utils/cn"
+import LandingLayer from "@/shared/components/LandingLayer"
 
-export const LandingFAQ = () => {
+export const KnowledgeCenterFaq = () => {
   const [activeValue, setActiveValue] = useState<string>(getValue(0))
 
   const list = getFaqData()
 
   return (
-    <div className="space-y-6">
+    <LandingLayer className="space-y-6">
       <h1 className="font-inter text-2xl font-bold text-text-color-100">Frequently Asked Questions</h1>
 
       <Accordion type="single" defaultValue={getValue(0)} onChange={(e) => console.log(e.target)} className="space-y-3">
@@ -30,7 +31,7 @@ export const LandingFAQ = () => {
           )
         })}
       </Accordion>
-    </div>
+    </LandingLayer>
   )
 }
 

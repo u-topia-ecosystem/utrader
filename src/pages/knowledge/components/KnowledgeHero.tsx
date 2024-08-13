@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const KnowledgeHero = () => {
   return (
-    <LandingLayer className="grid grid-cols-1 gap-10 py-10 pb-24 md-2:grid-cols-[1fr_300px] lg-2:grid-cols-[1fr_462px]">
+    <LandingLayer className="grid grid-cols-1 gap-10 md-2:grid-cols-[1fr_300px] lg-2:grid-cols-[1fr_462px]">
       <ContentSection />
 
       <div className="max-md-2:hidden">
