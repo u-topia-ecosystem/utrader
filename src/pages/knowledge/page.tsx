@@ -6,7 +6,7 @@ import { KnowledgeCenterFaq } from "./components/faq"
 
 const Page = () => {
   return (
-    <LandingLayout className="relative z-0 space-y-10 overflow-hidden pb-16">
+    <LandingLayout className="relative z-0 space-y-10 overflow-hidden">
       <KnowledgeHero />
 
       <section className="bg-neutral-control-color-10">

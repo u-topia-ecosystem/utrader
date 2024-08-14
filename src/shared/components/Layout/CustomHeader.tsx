@@ -29,7 +29,7 @@ export const AppHeader: FC<CustomHeaderProps> = ({ options, headerLogoIcon, show
   }
 
   return (
-    <header className="flex w-full justify-between bg-navbar-background-color px-[18px] py-2.5 md:px-6 lg:px-9">
+    <header className="flex w-full justify-between border-b border-navbar-control-bg-color-20 bg-navbar-background-color px-[18px] py-2.5 md:px-6 lg:px-9">
       <Link className="block h-11 w-32 cursor-pointer" href="/" onClick={logoClickHandler}>
         {headerLogoIcon}
       </Link>
