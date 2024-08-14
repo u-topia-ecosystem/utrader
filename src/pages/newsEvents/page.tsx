@@ -4,7 +4,7 @@ import NewsListing from "./components/NewsListing"
 
 const NewsEvents = () => {
   return (
-    <LandingLayout className="pt-5">
+    <LandingLayout className="space-y-14 pt-5">
       <NewsHero />
       <NewsListing />
     </LandingLayout>
